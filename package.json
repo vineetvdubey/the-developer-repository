@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/vineetvdubey/the-developer-repository#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1"
   }
 }
