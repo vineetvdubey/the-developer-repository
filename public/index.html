@@ -5,10 +5,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>The Developer Repository</title>
 </head>
 
 <body>
+  <header>
+    <h1>UI work in progress</h1>
+  </header>
+  <main>
+    <hr>
+    <h2>Try out the APIs.</h2>
+    <hr>
+    <h3>Get all developers</h3>
+    <pre>
+    GET /api/developers
+    Sample Response Body:
+    [{
+      "id": "gcnit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4833751?v=4"
+    }, {
+      "id": "sagarjain0907",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20463272?v=4"
+    }]
+    Status: 200
+  </pre>
+
+    <hr>
+    <h3>Add a developer</h3>
+    <pre>
+    POST /api/developers
+    Sample Request Body:
+    {
+      "github_id": "gcnit",
+      "linkedin_id": "gcnit",
+      "codechef_id": "gc_nit",
+      "hackerrank_id": "gcnit",
+      "twitter_id": "gc_nit",
+      "medium_id": "gc_nit"
+    }
+    Sample Response Body:
+    {
+      "id": "gcnit"
+    }
+    Status: 201 (User Created), 400 (GitHub username is invalid)
+  </pre>
+
+    <hr>
+    <h3>Get all developers</h3>
+    <pre>
+    GET /api/developers/:id
+    Sample Response Body:
+    {
+      "id": "gcnit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4833751?v=4",
+      "name": "Gaurav Chandak",
+      "company": "workat.tech",
+      "blog": "https://workat.tech",
+      "location": "Bangalore, India",
+      "email": null,
+      "bio": "Building workat.tech;\r\nPreviously Software Engineer at @Flipkart, @microsoft and @tracxn",
+      "github_id": "gcnit",
+      "linkedin_id": "gcnit",
+      "codechef_id": "gc_nit",
+      "hackerrank_id": "gcnit",
+      "twitter_id": "gc_nit",
+      "medium_id": "gc_nit",
+      "repos": [{
+        "name": "awesome-learn-to-code",
+        "html_url": "https://github.com/gcnit/awesome-learn-to-code",
+        "description": "A list of awesome resources for learning to code",
+        "updated_at": "2020-08-12T18:21:53Z"
+    }]
+    }
+    Status: 200 (Valid User), 404 (User does not exist)
+  </pre>
+
+    <hr>
+    <h3>Remove a developer</h3>
+    <pre>
+    DELETE /api/developers/:id
+    Status: 204 (Deleted)
+  </pre>
+    <hr>
+  </main>
 
 </body>
 
