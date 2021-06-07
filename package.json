@@ -1,0 +1,24 @@
+{
+  "name": "the-developer-repository",
+  "version": "1.0.0",
+  "description": "A platform where anyone can create their developer profile. Created using NodeJS backend + vanialla html/css/js frontend.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineetvdubey/the-developer-repository.git"
+  },
+  "keywords": [],
+  "author": "vineetvdubey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vineetvdubey/the-developer-repository/issues"
+  },
+  "homepage": "https://github.com/vineetvdubey/the-developer-repository#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
