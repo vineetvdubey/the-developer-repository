@@ -6,88 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Developer Repository</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css" />
 </head>
 
 <body>
-  <header>
-    <h1>The Developer Repository<small><cite> - by Vineet Dubey</cite></small></h1>
+  <header class="header-style">
+    <div class="header-container">
+      <section class="header-item">
+        <div class="header-title">The&nbsp;Developer Repository</div>
+      </section>
+      <section class="header-item">
+        <img src="/resources/undraw_dev_productivity_umsq 1.png" height="500px" width="600px"
+          alt="A person working on a laptop" class="header-image">
+      </section>
+    </div>
   </header>
   <main>
-    <hr>
-    <h2>UI Work In Progress</h2>
-    <h3>Try out the below APIs till then.</h3>
-    <hr>
-    <h4>Get all developers</h4>
-    <pre>
-    GET /api/developers
-    Sample Response Body:
-    [{
-      "id": "gcnit",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4833751?v=4"
-    }, {
-      "id": "sagarjain0907",
-      "avatar_url": "https://avatars.githubusercontent.com/u/20463272?v=4"
-    }]
-    Status: 200
-  </pre>
-
-    <hr>
-    <h4>Add a developer</h4>
-    <pre>
-    POST /api/developers
-    Sample Request Body:
-    {
-      "github_id": "gcnit",
-      "linkedin_id": "gcnit",
-      "codechef_id": "gc_nit",
-      "hackerrank_id": "gcnit",
-      "twitter_id": "gc_nit",
-      "medium_id": "gc_nit"
-    }
-    Sample Response Body:
-    {
-      "id": "gcnit"
-    }
-    Status: 201 (User Created), 400 (GitHub username is invalid)
-  </pre>
-
-    <hr>
-    <h4>Get a developer</h4>
-    <pre>
-    GET /api/developers/:id
-    Sample Response Body:
-    {
-      "id": "gcnit",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4833751?v=4",
-      "name": "Gaurav Chandak",
-      "company": "workat.tech",
-      "blog": "https://workat.tech",
-      "location": "Bangalore, India",
-      "email": null,
-      "bio": "Building workat.tech;\r\nPreviously Software Engineer at @Flipkart, @microsoft and @tracxn",
-      "github_id": "gcnit",
-      "linkedin_id": "gcnit",
-      "codechef_id": "gc_nit",
-      "hackerrank_id": "gcnit",
-      "twitter_id": "gc_nit",
-      "medium_id": "gc_nit",
-      "repos": [{
-        "name": "awesome-learn-to-code",
-        "html_url": "https://github.com/gcnit/awesome-learn-to-code",
-        "description": "A list of awesome resources for learning to code",
-        "updated_at": "2020-08-12T18:21:53Z"
-    }]
-    }
-    Status: 200 (Valid User), 404 (User does not exist)
-  </pre>
-
-    <hr>
-    <h4>Remove a developer</h4>
-    <pre>
-    DELETE /api/developers/:id
-    Status: 204 (Deleted)
-  </pre>
-    <hr>
+    <div class="main-heading">Explore developer profiles</div>
+    <hr class="hrule-top">
+    <div class="search-bar">
+      <input type="text" placeholder="Search for username" class="search-input"><img src="/resources/search-24px.svg" height="50px"
+        width="50px" alt="magnifying glass logo" class="search-logo">
+    </div>
   </main>
 
 </body>
