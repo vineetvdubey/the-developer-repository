@@ -49,6 +49,13 @@
   margin: 50px;
 }
 
+.hrule-modal {
+  background-color: #d0cde1;
+  border: 0;
+  height: 2px;
+  margin: 50px 30px;
+}
+
 .search-bar {
   margin: 50px auto 100px auto;
   background-color: #d0cde1;
@@ -107,6 +114,7 @@
   height: 80px;
   padding: 0 72px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .footer-bar {
@@ -120,4 +128,131 @@
 .footer-content {
   font-size: 24px;
   color: #ffffff;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1040px;
+  max-width: 100%;
+  height: 500px;
+  max-height: 100%;
+  z-index: 1010;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.modal.closed {
+  display: none;
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay.closed {
+  display: none;
+}
+
+.modal-title {
+  color: #000000;
+}
+
+.modal-title-container {
+  margin: 50px;
+  font-size: 32px;
+}
+
+.modal-cross {
+  vertical-align: middle;
+  color: #aaaaaa;
+  float: right;
+  font-weight: bold;
+  padding: 0 20px;
+  user-select: none;
+}
+
+.modal-cross:hover,
+.modal-cross:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-container {
+  margin: 50px 0 100px 80px;
+}
+
+.profile-item {
+  margin: 30px 0;
+}
+
+.logo-label-inner {
+  color: #000000;
+  font-size: 24px;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+
+.logo-img {
+  vertical-align: middle;
+}
+
+.logo-label-outer {
+  margin-bottom: 20px;
+}
+
+.profile-item-input {
+  font-size: 24px;
+  color: #555555;
+  height: 50px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: #d0cde1;
+  border-style: solid;
+  border-width: 1px;
+  text-indent: 15px;
+}
+
+.profile-item-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 4px #aaaaaa;
+}
+
+.modal-footer-container {
+  margin: 0 65px 50px 0;
+  float: right;
+}
+
+.modal-submit-btn {
+  font-size: 25px;
+  background-color: #81629e;
+  border-width: 0px;
+  border: none;
+  color: #ffffff;
+  height: 50px;
+  width: 175px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.modal-cancel-btn {
+  font-size: 25px;
+  background-color: #ffffff;
+  border-width: 0px;
+  border: none;
+  color: #3f3d56;
+  height: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-right: 50px;
+  padding: 0 30px;
 }
