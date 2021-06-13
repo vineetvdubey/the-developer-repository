@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const developersManager = require('./developersManager');
 
@@ -18,7 +19,7 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  const id = req.params['id'];
+  const { id } = req.params;
   developersManager.getDeveloper(id).then((details) => {
     if (details.error) {
       res.status(404);
@@ -30,7 +31,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  const id = req.params['id'];
+  const { id } = req.params;
   developersManager.deleteDeveloper(id);
   res.sendStatus(204);
 });
