@@ -78,10 +78,7 @@ const addDeveloper = (developer) => {
 
 const getDeveloper = async (id) => {
   if (developersStore[id]) {
-    const [userData, reposData] = await Promise.all([
-      fetchGithubUserDetails(id),
-      fetchGithubReposDetails(id),
-    ]);
+    const [userData, reposData] = await Promise.all([fetchGithubUserDetails(id), fetchGithubReposDetails(id)]);
     const devReposData = reposData.map((item) => {
       const { name, html_url, description, updated_at } = item;
       return { name, html_url, description, updated_at };
