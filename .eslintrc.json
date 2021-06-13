@@ -6,33 +6,15 @@
   "extends": ["airbnb", "eslint:recommended", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
-    "no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    "no-unused-expressions": [
-      2,
-      {
-        "allowShortCircuit": true
-      }
-    ],
-    "no-param-reassign": [
-      2,
-      {
-        "props": false
-      }
-    ],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-unused-expressions": [2, { "allowShortCircuit": true }],
+    "no-param-reassign": [2],
     "no-console": [1],
     "no-var": [2],
     "prefer-destructuring": [1],
-    "camelcase": [1]
+    "camelcase": [1],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/react-in-jsx-scope": [0]
   }
 }
