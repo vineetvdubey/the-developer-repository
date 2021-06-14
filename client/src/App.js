@@ -1,22 +1,16 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ListPage from './components/ListPage';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
-  fetch(`/api/developers`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/profile/:id" component={ProfilePage} />
+        <Route exact path="/" component={ListPage} />
+      </Switch>
+    </Router>
   );
 }
 

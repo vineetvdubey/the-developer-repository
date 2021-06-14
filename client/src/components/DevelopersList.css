@@ -1,0 +1,96 @@
+.main-heading {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 56px;
+  color: #3f3d56;
+}
+
+.hrule {
+  background-color: #d0cde1;
+  border: 0;
+  height: 2px;
+  margin: 50px;
+}
+
+.hrule-modal {
+  background-color: #d0cde1;
+  border: 0;
+  height: 2px;
+  margin: 50px 30px;
+}
+
+.search-bar {
+  margin: 50px auto 100px auto;
+  background-color: #d0cde1;
+  height: 80px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.search-input {
+  height: 60px;
+  width: 700px;
+  margin-left: 10px;
+  border-radius: 15px;
+  border-width: 0px;
+  border: none;
+  font-size: 24px;
+  text-indent: 30px;
+  color: #3f3d56;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-logo {
+  margin: 15px 20px;
+}
+
+.developer-container {
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.developer-avatar {
+  margin-right: 50px;
+}
+
+.developer-avatar-name {
+  color: #a48d63;
+  font-size: 36px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.developer-avatar-arrow {
+  color: #006af9;
+  font-size: 24px;
+}
+
+.add-dev-msg {
+  font-size: 36px;
+  color: #3f3d56;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.add-dev-btn-wrapper {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.add-dev-btn {
+  font-size: 36px;
+  background-color: #81629e;
+  border-width: 0px;
+  border: none;
+  color: #ffffff;
+  height: 80px;
+  padding: 0 72px;
+  border-radius: 15px;
+  cursor: pointer;
+}
