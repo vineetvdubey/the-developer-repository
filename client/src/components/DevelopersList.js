@@ -1,7 +1,8 @@
 import React from 'react';
 import './DevelopersList.css';
 import searchImage from '../resources/search-24px.svg';
-import avatar from '../resources/account_circle-24px.svg';
+import DevEntry from './DevEntry';
+import AddDevInfo from './AddDevInfo';
 
 class DevelopersList extends React.Component {
   constructor(props) {
@@ -25,68 +26,42 @@ class DevelopersList extends React.Component {
   }
 
   updateSearchText = (event) => {
-    this.setState({ searchText: event.target.value });
+    this.setState({ searchText: event.target.value.trim() });
   };
 
   render() {
-    console.log(this.state.developers);
-    console.log(this.state.searchText);
+    let developersListAndSearch = '';
+    if (this.state.developers.length > 0) {
+      developersListAndSearch = (
+        <div>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search for username"
+              className="search-input"
+              value={this.state.searchText}
+              onChange={this.updateSearchText}
+            />
+            <img src={searchImage} height="50px" width="50px" alt="magnifying glass logo" className="search-logo" />
+          </div>
+          <div className="developer-container">
+            {this.state.developers
+              .filter((developer) => developer.id.includes(this.state.searchText))
+              .map((developer) => (
+                <DevEntry key={developer.id} id={developer.id} avatarUrl={developer.avatar_url} />
+              ))}
+          </div>
+          <hr className="hrule" />
+        </div>
+      );
+    }
+
     return (
       <div>
         <div className="main-heading">Explore developer profiles</div>
         <hr className="hrule" />
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search for username"
-            className="search-input"
-            value={this.state.searchText}
-            onChange={this.updateSearchText}
-          />
-          <img src={searchImage} height="50px" width="50px" alt="magnifying glass logo" className="search-logo" />
-        </div>
-        <div className="developer-container">
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">gcnit</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">vineetvdubey</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">rahul</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">bunty</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">bubly</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">hola</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-          <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" />
-            <span className="developer-avatar-name">okay</span>
-            <span className="developer-avatar-arrow">&#8599;</span>
-          </div>
-        </div>
-        <hr className="hrule" />
-        <div className="add-dev-msg">Could not find what you were looking for?</div>
-        <div className="add-dev-btn-wrapper">
-          <input id="open-button" type="button" value="Add developer info" className="add-dev-btn" />
-        </div>
+        {developersListAndSearch}
+        <AddDevInfo devListCount={this.state.developers.length} />
       </div>
     );
   }

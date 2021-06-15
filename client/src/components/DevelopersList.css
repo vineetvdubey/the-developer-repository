@@ -9,7 +9,7 @@
   background-color: #d0cde1;
   border: 0;
   height: 2px;
-  margin: 50px;
+  margin: 0 50px;
 }
 
 .hrule-modal {
@@ -20,7 +20,7 @@
 }
 
 .search-bar {
-  margin: 50px auto 100px auto;
+  margin: 50px auto 50px auto;
   background-color: #d0cde1;
   height: 80px;
   width: 800px;
@@ -50,53 +50,9 @@
 }
 
 .developer-container {
-  margin: 100px auto;
   /*Below are temporary, convert developer-container to use grid*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1000px;
   /*Above are temporary, convert developer-container to use grid*/
-}
-
-.developer-entry {
-  display: flex;
-  align-items: center;
-  margin: 95px 50px;
-}
-
-.developer-avatar-name {
-  color: #a48d63;
-  font-size: 36px;
-  margin-left: 50px;
-  margin-right: 20px;
-}
-
-.developer-avatar-arrow {
-  color: #006af9;
-  font-size: 24px;
-}
-
-.add-dev-msg {
-  font-size: 36px;
-  color: #3f3d56;
-  margin: 50px auto;
-  text-align: center;
-}
-
-.add-dev-btn-wrapper {
-  text-align: center;
-  margin: 50px auto;
-}
-
-.add-dev-btn {
-  font-size: 36px;
-  background-color: #81629e;
-  border-width: 0px;
-  border: none;
-  color: #ffffff;
-  height: 80px;
-  padding: 0 72px;
-  border-radius: 15px;
-  cursor: pointer;
 }

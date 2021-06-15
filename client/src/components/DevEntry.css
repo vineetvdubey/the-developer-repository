@@ -1,0 +1,26 @@
+.developer-entry {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 50px 0;
+}
+
+.developer-avatar-name {
+  color: #a48d63;
+  font-size: 36px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.developer-avatar-arrow {
+  color: #006af9;
+  font-size: 24px;
+}
+
+.developer-entry img {
+  border-radius: 50%;
+}
+
+.dev-entry-link {
+  text-decoration: none;
+}
