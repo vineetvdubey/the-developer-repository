@@ -46,7 +46,7 @@ class DevelopersList extends React.Component {
           </div>
           <div className="developer-container">
             {this.state.developers
-              .filter((developer) => developer.id.includes(this.state.searchText))
+              .filter((developer) => developer.id.toLowerCase().includes(this.state.searchText.toLowerCase()))
               .map((developer) => (
                 <DevEntry key={developer.id} id={developer.id} avatarUrl={developer.avatar_url} />
               ))}
