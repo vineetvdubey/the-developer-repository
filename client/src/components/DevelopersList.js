@@ -47,8 +47,38 @@ class DevelopersList extends React.Component {
         </div>
         <div className="developer-container">
           <div className="developer-entry">
-            <img src={avatar} height="100px" width="100px" alt="user avatar" className="developer-avatar" />
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
             <span className="developer-avatar-name">gcnit</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">vineetvdubey</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">rahul</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">bunty</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">bubly</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">hola</span>
+            <span className="developer-avatar-arrow">&#8599;</span>
+          </div>
+          <div className="developer-entry">
+            <img src={avatar} height="100px" width="100px" alt="user avatar" />
+            <span className="developer-avatar-name">okay</span>
             <span className="developer-avatar-arrow">&#8599;</span>
           </div>
         </div>

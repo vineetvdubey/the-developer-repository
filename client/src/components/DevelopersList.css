@@ -50,13 +50,19 @@
 }
 
 .developer-container {
-  height: 300px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px auto;
+  /*Below are temporary, convert developer-container to use grid*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1000px;
+  /*Above are temporary, convert developer-container to use grid*/
 }
 
-.developer-avatar {
-  margin-right: 50px;
+.developer-entry {
+  display: flex;
+  align-items: center;
+  margin: 95px 50px;
 }
 
 .developer-avatar-name {
