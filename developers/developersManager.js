@@ -10,6 +10,15 @@ const developersStore = {
     twitter_id: 'gc_nit',
     medium_id: 'gc_nit',
   },
+  sagarjain0907: {
+    avatar_url: 'https://avatars.githubusercontent.com/u/20463272?v=4',
+    github_id: 'sagarjain0907',
+    linkedin_id: '',
+    codechef_id: '',
+    hackerrank_id: '',
+    twitter_id: '',
+    medium_id: '',
+  },
   vineetvdubey: {
     avatar_url: 'https://avatars.githubusercontent.com/u/35378726?v=4',
     github_id: 'vineetvdubey',
@@ -17,6 +26,24 @@ const developersStore = {
     codechef_id: '',
     hackerrank_id: '',
     twitter_id: 'vineetvdubey',
+    medium_id: '',
+  },
+  PrafulAnand: {
+    avatar_url: 'https://avatars.githubusercontent.com/u/18001096?v=4',
+    github_id: 'PrafulAnand',
+    linkedin_id: '',
+    codechef_id: '',
+    hackerrank_id: '',
+    twitter_id: '',
+    medium_id: '',
+  },
+  sumedha1308: {
+    avatar_url: 'https://avatars.githubusercontent.com/u/25945916?v=4',
+    github_id: 'sumedha1308',
+    linkedin_id: '',
+    codechef_id: '',
+    hackerrank_id: '',
+    twitter_id: '',
     medium_id: '',
   },
 };
@@ -37,7 +64,7 @@ const fetchGithubUserDetails = (githubLogin) => {
     .get(url)
     .then((response) => response.data)
     .catch((error) => {
-      if (error.response.status === 404) {
+      if (error.response && error.response.status === 404) {
         return errorObject('GitHub username is invalid');
       }
       return errorObject('Unexpected server error. Please try again later.');
