@@ -8,13 +8,13 @@ class ProfilePage extends React.Component {
     this.state = { data: {} };
   }
 
-  fetchDeveloperDetails = (id) => {
+  fetchDeveloperDetails(id) {
     fetch(`/api/developers/${id}`)
       .then((response) => response.json())
       .then((devData) => {
         this.setState({ data: devData });
       });
-  };
+  }
 
   componentDidMount() {
     this.fetchDeveloperDetails(this.props.match.params.id);
