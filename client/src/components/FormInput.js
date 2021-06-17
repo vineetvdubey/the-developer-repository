@@ -15,7 +15,7 @@ class FormInput extends React.Component {
           <img src={this.props.src} height="30px" width="30px" alt="logo" className="logo-img" />
           <span className="logo-label-inner">{this.props.label}</span>
         </div>
-        <input className="profile-item-input" />
+        <input name={this.props.name} onChange={this.props.onChange} className="profile-item-input" />
       </div>
     );
   }
@@ -24,6 +24,8 @@ class FormInput extends React.Component {
 FormInput.propTypes = {
   src: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default FormInput;
