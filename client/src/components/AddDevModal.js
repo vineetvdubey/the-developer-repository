@@ -19,29 +19,78 @@ class AddDevModal extends React.Component {
       hackerrankId: '',
       twitterId: '',
       mediumId: '',
+      errorMessage: null,
     };
   }
 
+  postAddDeveloper = () => {
+    fetch(`/api/developers`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        github_id: this.state.githubId,
+        linkedin_id: this.state.linkedinId,
+        codechef_id: this.state.codechefId,
+        hackerrank_id: this.state.hackerrankId,
+        twitter_id: this.state.twitterId,
+        medium_id: this.state.mediumId,
+      }),
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.status === 201) {
+          this.closeModal();
+        } else if (res.status === 400) {
+          throw new Error('Invalid GitHub user ID. Try again.');
+        } else {
+          throw new Error('Unexpected Error - Please try again later.');
+        }
+      })
+      .catch((e) => {
+        this.setState({ errorMessage: e.message });
+      });
+  };
+
   updateInputText = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value, errorMessage: null });
   };
 
   submitHandler = (event) => {
     event.preventDefault();
-    alert(this.state.githubId);
+    if (this.state.githubId.trim() === '') {
+      this.setState({ errorMessage: 'GitHub user ID is mandatory.' });
+    } else {
+      this.postAddDeveloper();
+    }
+  };
+
+  closeModal = () => {
+    this.setState({
+      githubId: '',
+      linkedinId: '',
+      codechefId: '',
+      hackerrankId: '',
+      twitterId: '',
+      mediumId: '',
+      errorMessage: null,
+    });
+    this.props.onClose();
   };
 
   render() {
     if (!this.props.show) {
       return null;
     }
-    console.log(this.state);
+
     return (
       <>
         <div className="modal" aria-hidden="true">
           <div className="modal-title-container">
             <span className="modal-title">Add developer profile</span>
-            <span className="modal-cross" onClick={this.props.onClose} aria-hidden="true">
+            <span className="modal-cross" onClick={this.closeModal} aria-hidden="true">
               &times;
             </span>
           </div>
@@ -55,9 +104,10 @@ class AddDevModal extends React.Component {
               <FormInput src={TwitterLogo} label="Twitter" name="twitterId" onChange={this.updateInputText} />
               <FormInput src={MediumLogo} label="Medium" name="mediumId" onChange={this.updateInputText} />
             </div>
+            <div className="error-div">{this.state.errorMessage}</div>
             <hr className="hrule-modal" />
             <div className="modal-footer-container">
-              <input type="button" value="Cancel" className="modal-cancel-btn" onClick={this.props.onClose} />
+              <input type="button" value="Cancel" className="modal-cancel-btn" onClick={this.closeModal} />
               <input type="submit" value="Submit" className="modal-submit-btn" />
             </div>
           </form>
