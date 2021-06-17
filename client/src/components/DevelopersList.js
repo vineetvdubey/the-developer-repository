@@ -17,13 +17,13 @@ class DevelopersList extends React.Component {
     this.fetchAllDevelopers();
   }
 
-  fetchAllDevelopers() {
+  fetchAllDevelopers = () => {
     fetch(`/api/developers`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({ developers: data });
       });
-  }
+  };
 
   updateSearchText = (event) => {
     this.setState({ searchText: event.target.value.trim() });
@@ -61,7 +61,7 @@ class DevelopersList extends React.Component {
         <div className="main-heading">Explore developer profiles</div>
         <hr className="hrule" />
         {developersListAndSearch}
-        <AddDevInfo devListCount={this.state.developers.length} />
+        <AddDevInfo fetchAllDevelopers={this.fetchAllDevelopers} devListCount={this.state.developers.length} />
       </>
     );
   }

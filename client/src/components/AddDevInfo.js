@@ -24,7 +24,11 @@ class AddDevInfo extends React.Component {
             className="add-dev-btn"
           />
         </div>
-        <AddDevModal onClose={() => this.setState({ show: false })} show={this.state.show} />
+        <AddDevModal
+          onClose={() => this.setState({ show: false })}
+          show={this.state.show}
+          fetchAllDevelopers={this.props.fetchAllDevelopers}
+        />
       </>
     );
   }
@@ -32,6 +36,7 @@ class AddDevInfo extends React.Component {
 
 AddDevInfo.propTypes = {
   devListCount: PropTypes.number.isRequired,
+  fetchAllDevelopers: PropTypes.func.isRequired,
 };
 
 export default AddDevInfo;

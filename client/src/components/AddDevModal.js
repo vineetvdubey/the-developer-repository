@@ -42,6 +42,7 @@ class AddDevModal extends React.Component {
       .then((res) => {
         console.log(res);
         if (res.status === 201) {
+          this.props.fetchAllDevelopers();
           this.closeModal();
         } else if (res.status === 400) {
           throw new Error('Invalid GitHub user ID. Try again.');
@@ -121,6 +122,7 @@ class AddDevModal extends React.Component {
 AddDevModal.propTypes = {
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
+  fetchAllDevelopers: PropTypes.func.isRequired,
 };
 
 export default AddDevModal;
