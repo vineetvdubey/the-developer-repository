@@ -25,9 +25,9 @@ class DevelopersList extends React.Component {
       });
   }
 
-  updateSearchText(event) {
+  updateSearchText = (event) => {
     this.setState({ searchText: event.target.value.trim() });
-  }
+  };
 
   render() {
     let developersListAndSearch = '';
