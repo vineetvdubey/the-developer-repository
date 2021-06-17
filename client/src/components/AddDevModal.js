@@ -1,6 +1,7 @@
 import React from 'react';
 import './AddDevModal.css';
 import PropTypes from 'prop-types';
+import FormInput from './FormInput';
 import GithubLogo from '../icons/iconfinder_github_317712.png';
 import LinkedinLogo from '../icons/iconfinder_2018_social_media_popular_app_logo_linkedin_3225190.png';
 import CodechefLogo from '../icons/codechef-1324440139527402917_32.png';
@@ -29,61 +30,27 @@ class AddDevModal extends React.Component {
             </span>
           </div>
           <hr className="hrule-modal" />
-          <div className="profile-container">
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={GithubLogo} height="30px" width="30px" alt="Github logo" className="logo-img" />
-                <span className="logo-label-inner">Github*</span>
-              </div>
-              <input id="github-id" className="profile-item-input" />
+          <form>
+            <div className="profile-container">
+              <FormInput src={GithubLogo} label="Github*" />
+              <FormInput src={LinkedinLogo} label="Linkedin" />
+              <FormInput src={CodechefLogo} label="Codechef" />
+              <FormInput src={HackerrankLogo} label="Hackerrank" />
+              <FormInput src={TwitterLogo} label="Twitter" />
+              <FormInput src={MediumLogo} label="Medium" />
             </div>
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={LinkedinLogo} height="30px" width="30px" alt="Linkedin logo" className="logo-img" />
-                <span className="logo-label-inner">Linkedin</span>
-              </div>
-              <input id="linkedin-id" className="profile-item-input" />
+            <hr className="hrule-modal" />
+            <div className="modal-footer-container">
+              <input
+                id="modal-cancel"
+                type="button"
+                value="Cancel"
+                className="modal-cancel-btn"
+                onClick={this.props.onClose}
+              />
+              <input id="modal-submit" type="button" value="Submit" className="modal-submit-btn" />
             </div>
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={CodechefLogo} height="30px" width="30px" alt="Codechef logo" className="logo-img" />
-                <span className="logo-label-inner">Codechef</span>
-              </div>
-              <input id="codechef-id" className="profile-item-input" />
-            </div>
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={HackerrankLogo} height="30px" width="30px" alt="Hackerrank logo" className="logo-img" />
-                <span className="logo-label-inner">Hackerrank</span>
-              </div>
-              <input id="hackerrank-id" className="profile-item-input" />
-            </div>
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={TwitterLogo} height="30px" width="30px" alt="Twitter logo" className="logo-img" />
-                <span className="logo-label-inner">Twitter</span>
-              </div>
-              <input id="twitter-id" className="profile-item-input" />
-            </div>
-            <div className="profile-item">
-              <div className="logo-label-outer">
-                <img src={MediumLogo} height="30px" width="30px" alt="Medium logo" className="logo-img" />
-                <span className="logo-label-inner">Medium</span>
-              </div>
-              <input id="medium-id" className="profile-item-input" />
-            </div>
-          </div>
-          <hr className="hrule-modal" />
-          <div className="modal-footer-container">
-            <input
-              id="modal-cancel"
-              type="button"
-              value="Cancel"
-              className="modal-cancel-btn"
-              onClick={this.props.onClose}
-            />
-            <input id="modal-submit" type="button" value="Submit" className="modal-submit-btn" />
-          </div>
+          </form>
         </div>
         <div className="modal-overlay" id="modal-overlay" />
       </>

@@ -48,42 +48,6 @@
   margin: 50px 0 100px 80px;
 }
 
-.profile-item {
-  margin: 30px 0;
-}
-
-.logo-label-inner {
-  color: #000000;
-  font-size: 24px;
-  padding-left: 15px;
-  vertical-align: middle;
-}
-
-.logo-img {
-  vertical-align: middle;
-}
-
-.logo-label-outer {
-  margin-bottom: 20px;
-}
-
-.profile-item-input {
-  font-size: 24px;
-  color: #555555;
-  height: 50px;
-  width: 600px;
-  border-radius: 10px;
-  border-color: #d0cde1;
-  border-style: solid;
-  border-width: 1px;
-  text-indent: 15px;
-}
-
-.profile-item-input:focus {
-  outline: none;
-  box-shadow: 0px 0px 4px #aaaaaa;
-}
-
 .modal-footer-container {
   margin: 0 65px 50px 0;
   float: right;
