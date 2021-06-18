@@ -119,7 +119,7 @@ const getDeveloper = async (id) => {
       company,
       blog,
       location,
-      email,
+      email: email == null ? '' : email,
       bio,
       github_id: developersStore[id].github_id,
       linkedin_id: developersStore[id].linkedin_id,

@@ -40,7 +40,6 @@ class AddDevModal extends React.Component {
       }),
     })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           this.props.fetchAllDevelopers();
           this.closeModal();
