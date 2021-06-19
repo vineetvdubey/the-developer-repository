@@ -51,15 +51,6 @@
   margin: 30px 0;
 }
 
-.dev-info-logo-links {
-  margin: 30px 0;
-}
-
-.dev-info-loc {
-  margin: 30px 0;
-  font-size: 16px;
-}
-
 .repo-info {
   background-color: #ffffff;
 }
@@ -78,21 +69,4 @@
   border: 0;
   height: 2px;
   margin: 0 7vw;
-}
-
-.loc-icon {
-  margin-right: 10px;
-}
-
-.loc-info {
-  margin: 5px 30px 5px 0;
-}
-
-.blog-link {
-  cursor: pointer;
-}
-
-.blog-link a {
-  text-decoration: none;
-  color: #0768fa;
 }

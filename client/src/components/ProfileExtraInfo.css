@@ -1,0 +1,26 @@
+.dev-info-loc {
+  margin: 30px 0;
+  font-size: 16px;
+}
+
+.align-info-sec {
+  display: flex;
+  align-items: center;
+}
+
+.loc-icon {
+  margin-right: 10px;
+}
+
+.loc-info {
+  margin: 5px 30px 5px 0;
+}
+
+.blog-link {
+  cursor: pointer;
+}
+
+.blog-link a {
+  text-decoration: none;
+  color: #0768fa;
+}
