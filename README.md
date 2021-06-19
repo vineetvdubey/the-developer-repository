@@ -1,7 +1,5 @@
 # The Developer Repository - [DEMO](https://dev-repo.herokuapp.com/)
 
-#### This project is a WORK IN PROGRESS
-
 ## A platform where anyone can create their developer profile. Created using NodeJS backend + ReactJS frontend.
 
 <br>
