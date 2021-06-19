@@ -12,6 +12,9 @@ import HackerrankLogo from '../icons/iconfinder_160_Hackerrank_logo_logos_437323
 import TwitterLogo from '../icons/iconfinder_2018_social_media_popular_app_logo_twitter_3225183.png';
 import MediumLogo from '../icons/iconfinder_Circled_Medium_svg5_5279113.png';
 import EmailLogo from '../icons/email-24px.svg';
+import LocationIcon from '../icons/location-icon.svg';
+import CompanyIcon from '../icons/company-icon.svg';
+import BlogIcon from '../icons/blog-icon.svg';
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -28,89 +31,6 @@ class ProfilePage extends React.Component {
   }
 
   componentDidMount() {
-    // this.setState({
-    //   data: {
-    //     id: 'vineetvdubey',
-    //     avatar_url: 'https://avatars.githubusercontent.com/u/35378726?v=4',
-    //     name: 'Vineet Dubey',
-    //     company: 'Kuliza Technologies',
-    //     blog: 'https://vineetvdubey.github.io',
-    //     location: 'India',
-    //     email: '',
-    //     bio: 'Software Engineer, workaholic, gamer !!',
-    //     github_id: 'vineetvdubey',
-    //     linkedin_id: 'vineetvdubey',
-    //     codechef_id: '',
-    //     hackerrank_id: '',
-    //     twitter_id: 'vineetvdubey',
-    //     medium_id: '',
-    //     repos: [
-    //       {
-    //         name: 'chota-url',
-    //         html_url: 'https://github.com/vineetvdubey/chota-url',
-    //         description:
-    //           'A URL shortening app with backend in NodeJS + express.js and frontend with vanilla html/css/js',
-    //         updated_at: '2021-06-05T17:04:14Z',
-    //       },
-    //       {
-    //         name: 'htmlcss-component-library',
-    //         html_url: 'https://github.com/vineetvdubey/htmlcss-component-library',
-    //         description: 'An HTML/CSS project covering basic concepts.',
-    //         updated_at: '2021-05-22T11:02:17Z',
-    //       },
-    //       {
-    //         name: 'htmlcss-personal-resume',
-    //         html_url: 'https://github.com/vineetvdubey/htmlcss-personal-resume',
-    //         description: 'Personal resume website built using vanilla HTML/CSS',
-    //         updated_at: '2021-05-22T12:07:26Z',
-    //       },
-    //       {
-    //         name: 'QuizAppJSCli',
-    //         html_url: 'https://github.com/vineetvdubey/QuizAppJSCli',
-    //         description: 'A command-line based quiz application written in JS.',
-    //         updated_at: '2021-05-02T05:39:15Z',
-    //       },
-    //       {
-    //         name: 'SimpleSearch',
-    //         html_url: 'https://github.com/vineetvdubey/SimpleSearch',
-    //         description: 'A simple indexing exercise.',
-    //         updated_at: '2019-08-20T18:24:23Z',
-    //       },
-    //       {
-    //         name: 'the-developer-repository',
-    //         html_url: 'https://github.com/vineetvdubey/the-developer-repository',
-    //         description:
-    //           'A platform where anyone can create their developer profile. Created using NodeJS backend + ReactJS frontend.',
-    //         updated_at: '2021-06-18T05:39:29Z',
-    //       },
-    //       {
-    //         name: 'utility-apps-ui',
-    //         html_url: 'https://github.com/vineetvdubey/utility-apps-ui',
-    //         description:
-    //           'A simple website using vanilla HTML/CSS/JS implementing various utility tools and converters.',
-    //         updated_at: '2021-05-31T08:53:22Z',
-    //       },
-    //       {
-    //         name: 'UtilityAppsJSCli',
-    //         html_url: 'https://github.com/vineetvdubey/UtilityAppsJSCli',
-    //         description: 'Multiple command-line based mini applications written in JS.',
-    //         updated_at: '2021-05-02T05:40:07Z',
-    //       },
-    //       {
-    //         name: 'vineetvdubey',
-    //         html_url: 'https://github.com/vineetvdubey/vineetvdubey',
-    //         description: 'Config files for my GitHub profile.',
-    //         updated_at: '2021-05-02T05:35:20Z',
-    //       },
-    //       {
-    //         name: 'vineetvdubey.github.io',
-    //         html_url: 'https://github.com/vineetvdubey/vineetvdubey.github.io',
-    //         description: 'Profile page',
-    //         updated_at: '2021-05-02T08:03:57Z',
-    //       },
-    //     ],
-    //   },
-    // });
     this.fetchDeveloperDetails(this.props.match.params.id);
   }
 
@@ -146,7 +66,7 @@ class ProfilePage extends React.Component {
             <div className="dev-info">
               <div className="dev-info-name">{data.name}</div>
               <div className="dev-info-bio">{data.bio}</div>
-              <div>
+              <div className="dev-info-logo-links">
                 <IconLink href="" src={GithubLogo} field={data.github_id} />
                 <IconLink href="" src={HackerrankLogo} field={data.hackerrank_id} />
                 <IconLink href="" src={CodechefLogo} field={data.codechef_id} />
@@ -155,8 +75,19 @@ class ProfilePage extends React.Component {
                 <IconLink href="" src={TwitterLogo} field={data.twitter_id} />
                 <IconLink href="" src={EmailLogo} field={data.email} />
               </div>
-              <div>
-                {data.location} {data.company} {data.blog}
+              <div className="dev-info-loc">
+                <div className="align-info-sec">
+                  <img src={LocationIcon} height="16px" width="16px" alt="location icon" className="loc-icon" />
+                  <span className="loc-info">{data.location}</span>
+                  <img src={CompanyIcon} height="16px" width="16px" alt="company icon" className="loc-icon" />
+                  <span className="loc-info">{data.company}</span>
+                </div>
+                <div className="align-info-sec blog-link">
+                  <img src={BlogIcon} height="16px" width="16px" alt="blog icon" className="loc-icon" />
+                  <a href={data.blog} target="_blank" rel="noreferrer" className="loc-info">
+                    {data.blog}
+                  </a>
+                </div>
               </div>
             </div>
           </span>

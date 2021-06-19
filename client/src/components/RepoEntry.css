@@ -1,5 +1,5 @@
 .repo-entry {
-  margin: 30px 5vw;
+  margin: 30px 7vw;
 }
 
 .repo-name {
@@ -26,4 +26,9 @@
   color: #3f3d56;
   font-size: 30px;
   line-height: 44px;
+}
+
+.align-info-sec {
+  display: flex;
+  align-items: center;
 }

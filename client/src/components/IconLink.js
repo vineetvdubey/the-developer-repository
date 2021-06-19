@@ -6,7 +6,7 @@ function IconLink(props) {
     return null;
   }
   return (
-    <a href={props.href} className="icon-link">
+    <a href={props.href} target="_blank" rel="noreferrer" className="icon-link">
       <img src={props.src} height="30px" width="30px" alt="user avatar" />
     </a>
   );
