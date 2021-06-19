@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin: 50px 0;
+  margin: 50px 50px;
 }
 
 .developer-avatar-name {
@@ -23,4 +23,5 @@
 
 .dev-entry-link {
   text-decoration: none;
+  flex-basis: 50%;
 }
