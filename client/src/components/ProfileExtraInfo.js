@@ -36,9 +36,15 @@ function ProfileExtraInfo(props) {
 }
 
 ProfileExtraInfo.propTypes = {
-  location: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
-  blog: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  company: PropTypes.string,
+  blog: PropTypes.string,
+};
+
+ProfileExtraInfo.defaultProps = {
+  location: '',
+  company: '',
+  blog: '',
 };
 
 export default ProfileExtraInfo;

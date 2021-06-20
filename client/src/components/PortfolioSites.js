@@ -24,13 +24,23 @@ function PortfolioSites(props) {
 }
 
 PortfolioSites.propTypes = {
-  github: PropTypes.string.isRequired,
-  hackerrank: PropTypes.string.isRequired,
-  codechef: PropTypes.string.isRequired,
-  linkedin: PropTypes.string.isRequired,
-  medium: PropTypes.string.isRequired,
-  twitter: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  hackerrank: PropTypes.string,
+  codechef: PropTypes.string,
+  linkedin: PropTypes.string,
+  medium: PropTypes.string,
+  twitter: PropTypes.string,
+  email: PropTypes.string,
+};
+
+PortfolioSites.defaultProps = {
+  github: '',
+  hackerrank: '',
+  codechef: '',
+  linkedin: '',
+  medium: '',
+  twitter: '',
+  email: '',
 };
 
 export default PortfolioSites;

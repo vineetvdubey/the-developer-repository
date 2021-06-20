@@ -6,16 +6,14 @@ function ListPageHeader() {
     <div className="header-style">
       <div className="header-container">
         <section className="header-item">
-          <div className="header-title">The&nbsp;Developer Repository</div>
+          <div className="header-title">
+            The&nbsp;Developer
+            <br />
+            Repository
+          </div>
         </section>
         <section className="header-item">
-          <img
-            src={headerImage}
-            height="500px"
-            width="600px"
-            alt="A person working on a laptop"
-            className="header-image"
-          />
+          <img src={headerImage} alt="A person working on a laptop" className="header-image" />
         </section>
       </div>
     </div>
