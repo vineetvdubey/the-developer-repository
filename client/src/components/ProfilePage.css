@@ -27,17 +27,21 @@
   background-color: #e5e5e5;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 80px 10vw 50px 10vw;
-  /* flex: 0 1 auto; */
 }
 
 .dev-info-avatar img {
   border-radius: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .dev-info {
-  margin-left: 50px;
+  margin: 50px;
   color: #3f3d56;
+  display: inline-block;
 }
 
 .dev-info-name {
