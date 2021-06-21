@@ -93,3 +93,60 @@
   font-weight: bold;
   font-size: 24px;
 }
+
+@media screen and (max-width: 480px) {
+  .modal-title-container {
+    margin: 30px;
+    font-size: 20px;
+  }
+
+  .modal {
+    width: 100vw;
+  }
+
+  .hrule-modal {
+    margin: 15px 5vw;
+  }
+
+  .profile-container {
+    margin: 25px 0 50px 20px;
+  }
+
+  .modal-cancel-btn {
+    font-size: 15px;
+    height: 30px;
+    margin-right: 30px;
+    padding: 0 10px;
+  }
+
+  .modal-submit-btn {
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+  }
+
+  .error-div {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .modal-title-container {
+    margin: 40px;
+    font-size: 30px;
+  }
+
+  .modal {
+    width: 100vw;
+  }
+
+  .hrule-modal {
+    margin: 25px 10vw;
+  }
+
+  .profile-container {
+    margin: 25px 0 50px 40px;
+  }
+}

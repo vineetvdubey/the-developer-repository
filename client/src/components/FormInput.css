@@ -34,3 +34,32 @@
   outline: none;
   box-shadow: 0px 0px 4px #aaaaaa;
 }
+
+@media screen and (max-width: 480px) {
+  .profile-item-input {
+    width: 80vw;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .logo-label-inner {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  .logo-img {
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+  }
+
+  .logo-label-outer {
+    margin-bottom: 15px;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .profile-item-input {
+    width: 80vw;
+  }
+}
