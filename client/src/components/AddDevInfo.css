@@ -21,3 +21,37 @@
   border-radius: 15px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  .add-dev-msg {
+    font-size: 24px;
+    margin: 25px auto;
+  }
+
+  .add-dev-btn {
+    font-size: 30px;
+    padding: 0 20px;
+    height: 50px;
+  }
+
+  .add-dev-btn-wrapper {
+    margin: 25px auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .add-dev-msg {
+    font-size: 36px;
+    margin: 35px auto;
+  }
+
+  .add-dev-btn {
+    font-size: 40px;
+    padding: 0 25px;
+    height: 80px;
+  }
+
+  .add-dev-btn-wrapper {
+    margin: 45px auto;
+  }
+}
