@@ -24,3 +24,15 @@
   text-decoration: none;
   color: #0768fa;
 }
+
+@media screen and (max-width: 480px) {
+  .align-info-sec {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .align-info-sec {
+    justify-content: center;
+  }
+}
